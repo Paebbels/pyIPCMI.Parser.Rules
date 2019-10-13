@@ -11,7 +11,7 @@
 # =============================================================================
 # Authors:            Patrick Lehmann
 #
-# Python package:
+# Python package:     A parser for *.rules files used in pyIPCMI.
 #
 # Description:
 # ------------------------------------
