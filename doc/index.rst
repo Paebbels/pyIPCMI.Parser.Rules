@@ -1,16 +1,9 @@
 pyIPCMI.Parser.Rules Documentation
 ##################################
 
-A generic path implementation to derive domain specific path libraries.
+A parser for ``*.rules`` files used in `pyIPCMI <https://github.com/Paebbels/pyIPCMI>`_.
 
-.. admonition:: Path Hierarchy
 
-   Write how to plan and implement a user-defined path hierarchy.
-
-.. #
-   inheritance-diagram:: Path hierarchy
-   :top-classes: modA.clsA modB.clsB
-   :parts: 1
 
 Installation/Updates
 ********************

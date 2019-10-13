@@ -9,7 +9,7 @@
 
 # pyIPCMI.Parser.Rules
 
-A parser for `*.rules` files in [pyIPCMI](https://github.com/Paebbels/pyIPCMI).
+A parser for `*.rules` files used in [pyIPCMI](https://github.com/Paebbels/pyIPCMI).
 
 
 ## Contributors:

@@ -187,4 +187,4 @@ class RulesParserMixIn:
 	def PostProcessRules(self):   return self._postProcessRules
 
 	def __str__(self):    return "RULES file: '{0!s}'".format(self._file) #self._file only available via late binding
-	def __repr__(self):    return self.__str__()
+	def __repr__(self):   return self.__str__()
