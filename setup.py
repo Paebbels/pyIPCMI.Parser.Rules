@@ -11,7 +11,7 @@
 # =============================================================================
 # Authors:            Patrick Lehmann
 #
-# Package installer:  A generic path to derive domain specific path libraries.
+# Package installer:  A parser for `*.rules` files used in pyIPCMI.
 #
 #
 # License:
@@ -43,21 +43,22 @@ with open("requirements.txt") as file:
 	for line in file.readlines():
 		requirements.append(line)
 
-projectName = "pyIPCMI.Parser.Rules"
+namespace =   ["pyIPCMI", "Parser", "Rules"]
+projectName = ".".join(namespace)
 
 github_url =  "https://github.com/Paebbels/" + projectName
 rtd_url =     "https://" + projectName + ".readthedocs.io/en/latest/"
 
 setuptools.setup(
 	name=projectName,
-	version="1.1.3",
+	version="1.1.4",
 
 	author="Patrick Lehmann",
 	author_email="Paebbels@gmail.com",
 	# maintainer="Patrick Lehmann",
 	# maintainer_email="Paebbels@gmail.com",
 
-	description="A generic path implementation to derive domain specific path libraries.",
+	description="A parser for `*.rules` files used in pyIPCMI.",
 	long_description=long_description,
 	long_description_content_type="text/markdown",
 
@@ -69,7 +70,10 @@ setuptools.setup(
 	},
 	# download_url="",
 
-	packages=setuptools.find_namespace_packages(include=["pyIPCMI.Parser.*"]),
+	packages=setuptools.find_namespace_packages(
+		include=[".".join(namespace), ".".join(namespace) + ".*"]
+	),
+	namespace_packages=namespace[0:1],
 	classifiers=[
 		"License :: OSI Approved :: Apache Software License",
 		"Operating System :: OS Independent",
@@ -82,7 +86,7 @@ setuptools.setup(
 		"Intended Audience :: Developers",
 		"Topic :: Utilities"
 	],
-	keywords="Python3 Path Generic-Library",
+	keywords="Python3 Parser pyIPCMI Code-DOM",
 
 	python_requires='>=3.5',
 	install_requires=requirements,
